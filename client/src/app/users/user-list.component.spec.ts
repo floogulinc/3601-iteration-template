@@ -20,7 +20,7 @@ import { UserCardComponent } from './user-card.component';
 import { UserListComponent } from './user-list.component';
 import { UserService } from './user.service';
 import { MatIconModule } from '@angular/material/icon';
-import { safeWaitForAsync } from '../utils/karma-utils';
+import { safeWaitForAsync } from '../../testing/karma-utils';
 
 const COMMON_IMPORTS: any[] = [
   FormsModule,

@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ActivatedRouteStub } from '../../testing/activated-route-stub';
 import { MockUserService } from '../../testing/user.service.mock';
-import { safeWaitForAsync } from '../utils/karma-utils';
+import { safeWaitForAsync } from '../../testing/karma-utils';
 import { User } from './user';
 import { UserCardComponent } from './user-card.component';
 import { UserProfileComponent } from './user-profile.component';

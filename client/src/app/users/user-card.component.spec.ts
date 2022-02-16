@@ -3,7 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { UserCardComponent } from './user-card.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
-import { safeWaitForAsync } from '../utils/karma-utils';
+import { safeWaitForAsync } from '../../testing/karma-utils';
 
 describe('UserCardComponent', () => {
   let component: UserCardComponent;
