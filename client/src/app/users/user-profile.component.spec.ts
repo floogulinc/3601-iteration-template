@@ -1,9 +1,10 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MatCardModule } from '@angular/material/card';
 import { ActivatedRoute } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ActivatedRouteStub } from '../../testing/activated-route-stub';
 import { MockUserService } from '../../testing/user.service.mock';
+import { safeWaitForAsync } from '../utils/karma-utils';
 import { User } from './user';
 import { UserCardComponent } from './user-card.component';
 import { UserProfileComponent } from './user-profile.component';
@@ -14,7 +15,7 @@ describe('UserProfileComponent', () => {
   let fixture: ComponentFixture<UserProfileComponent>;
   const activatedRoute: ActivatedRouteStub = new ActivatedRouteStub();
 
-  beforeEach(waitForAsync(() => {
+  beforeEach(safeWaitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule,

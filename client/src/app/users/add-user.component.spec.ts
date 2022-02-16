@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule, FormGroup, AbstractControl } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -8,6 +8,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterTestingModule } from '@angular/router/testing';
 import { MockUserService } from 'src/testing/user.service.mock';
+import { safeWaitForAsync } from '../utils/karma-utils';
 import { AddUserComponent } from './add-user.component';
 import { UserService } from './user.service';
 
@@ -16,7 +17,7 @@ describe('AddUserComponent', () => {
   let addUserForm: FormGroup;
   let fixture: ComponentFixture<AddUserComponent>;
 
-  beforeEach(waitForAsync(() => {
+  beforeEach(safeWaitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [
         FormsModule,

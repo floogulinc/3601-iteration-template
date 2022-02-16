@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -20,6 +20,7 @@ import { UserCardComponent } from './user-card.component';
 import { UserListComponent } from './user-list.component';
 import { UserService } from './user.service';
 import { MatIconModule } from '@angular/material/icon';
+import { safeWaitForAsync } from '../utils/karma-utils';
 
 const COMMON_IMPORTS: any[] = [
   FormsModule,
@@ -54,7 +55,7 @@ describe('User list', () => {
     });
   });
 
-  beforeEach(waitForAsync(() => {
+  beforeEach(safeWaitForAsync(() => {
     TestBed.compileComponents().then(() => {
       fixture = TestBed.createComponent(UserListComponent);
       userList = fixture.componentInstance;
@@ -112,7 +113,7 @@ describe('Misbehaving User List', () => {
     });
   });
 
-  beforeEach(waitForAsync(() => {
+  beforeEach(safeWaitForAsync(() => {
     TestBed.compileComponents().then(() => {
       fixture = TestBed.createComponent(UserListComponent);
       userList = fixture.componentInstance;
